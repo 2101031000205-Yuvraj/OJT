@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Demo Colors</title>
+    </head>
+    <body id="mybody">
+        <select name="" id="colors">
+            <option value="" disabled selected>Select Color</option>
+            <option value="pink">Pink</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Green">Green</option>
+            <option value="Orange">Orange</option>
+            <option value="crimson">crimson</option>
+            <option value="red">red</option>
+        </select>
+        <script>
+            var color= document.getElementById("colors");
+            var mybody = document.getElementById("mybody");
+            colors.addEventListener("change",()=>{mybody.style.backgroundColor=color.value;})
+        </script>
+    </body>
+</html>

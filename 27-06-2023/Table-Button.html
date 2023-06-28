@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Table Button</title>
+    </head>
+    <body>
+        <center>
+            <table border="2" cellpadding="5" width="50%">
+                   
+                
+                <tr>
+                    <td>Array:</td>
+                    <td><input type="text" placeholder="" id="array_content"></td>
+                </tr>
+
+
+                <tr>
+                    <td>Push:</td>
+                    <td><input type="text" placeholder="Enter Text To Push" id="push_items"><input type="button" value="Push" id="btn_push">
+                        <h4>New element will added to last</h4>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>POP:</td>
+                    <td><input type="button" value="Click to pop" id="btn_pop">
+                        <h4>Last element of the array will be remove</h4>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>UnShift:</td>
+                    <td><input type="text" placeholder="Enter Text To Unshift" id="unshift_item"><input type="button" value="UnShift" id="btn_unshift">
+                        <h4>New element will added first</h4>
+                    </td>
+                </tr>
+
+
+                <tr>
+                     <td>Shift</td>
+                    <td><input type="button" value="Click to shift" id="btn_shift">
+                        <h4>First element of the array will be remove</h4>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>Sort:</td>
+                    <td><input type="button" value="sort array" id="btn_sort"></td>
+                </tr>
+
+
+                <tr>
+                    <th>Reverse:</th>
+                    <td><input type="button" value="Reverse" id="btn_reverse"></td>
+                </tr>
+
+
+                <tr>
+                    <td>Concat:</td>
+                    <td><input type="text" placeholder="" id="merge"><input type="button" value="MergeArray" id="btn_merge"><br/>
+                        <input type="text" placeholder="" id="array_merge">
+                    </td>
+                </tr>  
+
+
+            </table>
+        </center>    
+    </body>
+    <script>
+        var array_content = document.getElementById("array_content");
+        var push_item = document.getElementById("push_item");
+        var btn_push = document.getElementById("btn_push");
+        var btn_pop = document.getElementById("btn_pop");
+        var unshift_item = document.getElementById("unshift_item");
+        var btn_unshift = document.getElementById("btn_unshift");
+        var btn_shift = document.getElementById("btn_shift");
+        var btn_sort = document.getElementById("btn_sort");
+        var btn_revers = document.getElementById("btn_revers");
+        var array_merge = document.getElementById("array_merge");
+        var btn_merge = document.getElementById("btn_merge");
+    </script>
+</html>
