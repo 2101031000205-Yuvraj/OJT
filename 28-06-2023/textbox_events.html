@@ -1,16 +1,18 @@
 <html>
     <head>
         <title>TextBox Different Events</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" type="text/javascript"></script>
         <script>
             $(document).ready(function(){
-                $("show_col").css(background-color:"green");
-
-                $("blur").click(function(){
-                    $(this).fadeOut(500);
+                $("show_col").focus(function(){
+                    $(this).css("background-color","red");
                 });
 
-                $("alert").click(function(){
+                $("blur").blur(function(){
+                    $(this).css("background-color","yellow");
+                });
+
+                $("alert").(function(){
                     $(this).fadeIn();
                 });
 
@@ -21,6 +23,6 @@
         <input type="text" placeholder="enter text" id="show_col"><hr/>
         <input type="text" placeholder="enter text" id="blur"><hr/>
         <input type="text" placeholder="enter text" id="alert"><hr/>
-        <input type="text" placeholder="enter text" id="">
+        <input type="text" placeholder="enter text" id="keyup">
     </body>
 </html>

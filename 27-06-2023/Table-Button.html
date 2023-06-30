@@ -4,64 +4,64 @@
     </head>
     <body>
         <center>
-            <table border="2" cellpadding="5" width="50%">
+            <table border="3" cellpadding="10" width="40%">
                    
                 
                 <tr>
-                    <td>Array:</td>
-                    <td><input type="text" placeholder="" id="array_content"></td>
+                    <th>Array:</th>
+                    <th><input type="text" placeholder="" id="array_content" size="50"></th>
                 </tr>
 
 
                 <tr>
-                    <td>Push:</td>
-                    <td><input type="text" placeholder="Enter Text To Push" id="push_items"><input type="button" value="Push" id="btn_push">
+                    <th>Push:</th>
+                    <th><input type="text" placeholder="Enter Text To Push" id="push_items"><input type="button" value="Push" id="btn_push">
                         <h4>New element will added to last</h4>
-                    </td>
+                    </th>
                 </tr>
 
 
                 <tr>
-                    <td>POP:</td>
-                    <td><input type="button" value="Click to pop" id="btn_pop">
+                    <th>POP:</th>
+                    <th><input type="button" value="Click to pop" id="btn_pop">
                         <h4>Last element of the array will be remove</h4>
-                    </td>
+                    </th>
                 </tr>
 
 
                 <tr>
-                    <td>UnShift:</td>
-                    <td><input type="text" placeholder="Enter Text To Unshift" id="unshift_item"><input type="button" value="UnShift" id="btn_unshift">
+                    <th>UnShift:</th>
+                    <th><input type="text" placeholder="Enter Text To Unshift" id="unshift_item"><input type="button" value="UnShift" id="btn_unshift">
                         <h4>New element will added first</h4>
-                    </td>
+                    </th>
                 </tr>
 
 
                 <tr>
-                     <td>Shift</td>
-                    <td><input type="button" value="Click to shift" id="btn_shift">
+                     <th>Shift</th>
+                    <th><input type="button" value="Click to shift" id="btn_shift">
                         <h4>First element of the array will be remove</h4>
-                    </td>
+                    </th>
                 </tr>
 
 
                 <tr>
-                    <td>Sort:</td>
-                    <td><input type="button" value="sort array" id="btn_sort"></td>
+                    <th>Sort:</th>
+                    <th><input type="button" value="sort array" id="btn_sort"></th>
                 </tr>
 
 
                 <tr>
                     <th>Reverse:</th>
-                    <td><input type="button" value="Reverse" id="btn_reverse"></td>
+                    <th><input type="button" value="Reverse" id="btn_reverse"></th>
                 </tr>
 
 
                 <tr>
-                    <td>Concat:</td>
-                    <td><input type="text" placeholder="" id="merge"><input type="button" value="MergeArray" id="btn_merge"><br/>
-                        <input type="text" placeholder="" id="array_merge">
-                    </td>
+                    <th>Concat:</th>
+                    <th><input type="text" placeholder="" id="merge"><input type="button" value="MergeArray" id="btn_merge"><br/>
+                        <input type="text" placeholder="" id="array_merge" size="50">
+                    </th>
                 </tr>  
 
 
@@ -71,6 +71,7 @@
     <script>
         var array_content = document.getElementById("array_content");
         var push_item = document.getElementById("push_item");
+        var array =["Yuvraj","Rawat",19,"male","ahmedabad"];
         var btn_push = document.getElementById("btn_push");
         var btn_pop = document.getElementById("btn_pop");
         var unshift_item = document.getElementById("unshift_item");
@@ -78,7 +79,47 @@
         var btn_shift = document.getElementById("btn_shift");
         var btn_sort = document.getElementById("btn_sort");
         var btn_revers = document.getElementById("btn_revers");
-        var array_merge = document.getElementById("array_merge");
         var btn_merge = document.getElementById("btn_merge");
+        var array_merge = document.getElementById("array_merge");
+        
+        array_content.value = array;
+        btn_push.addEventListener("click",()=>{
+            Array.push(push_item.value);
+            array_content.value = array;
+        });
+
+        btn_pop.addEventListener("click",()=>{
+            array.pop();
+            array_content.value = array;
+        });
+
+        btn_unshift.addEventListener("click",()=>{
+            array.unshift(unshift_item.value);
+            array_content.value = array;
+        });
+
+        btn_shift.addEventListener("value",()=>{
+            array.shift();
+            array_content.value = array;
+        });
+
+        btn_sort.addEventListener("value",()=>{
+            array.sort();
+            array_content.value = array;
+        });
+
+        btn_revers.addEventListener("value",()=>{
+            array.reverse();
+            array_content.value = array;
+        });
+
+        var data = ["mukesh","Ambani",45,"male"];
+        merge.value = data;
+
+        btn_merge.addEventListener("click",()=>{
+            var merge_data = Array.concat(data);
+            array_merge.value = merge_data;
+           });       
+
     </script>
 </html>
