@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <style type="text/css">
+            .ui-width-header,.ui-state-default,
+            ui-button{
+                background:red;
+                border : 1px solid cyan;
+                color : orange;
+                font-weight : bold;
+            }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#MyDiv").dialog({
+                    autoOpen : true,
+                });
+                $("#MyButton").click(function (){
+                    $("#MyDiv").dialog("open");
+                });
+            });
+        </script>
+    </head>
+    <body>
+           <p>
+              <label for="AgeValue">Enter Your Age:</label>
+              <input type="text" id="AgeValue" disabled="true"/>
+           </p>
+           
+           <div id="AgeRangeSilder"></div> 
+           
+           <hr/>
+
+           <div id="Pricevalue"></div>
+
+           <p>
+              <label for="starvalue">Start Value:</label>
+              <input type="text" id="starvalue" disabled="true"/>
+           </p>
+
+           <p>
+              <label for="endvalue">End Value:</label>
+              <input type="text" id="endvalue" disabled="true"/>
+           </p>
+
+           <p>
+              <label for="changevalue">Change In Range:</label>
+              <input type="text" id="slidevalue" disabled="true"/>
+            </p>
+    </body>
+</html>
